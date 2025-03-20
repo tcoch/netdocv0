@@ -2,17 +2,9 @@
     "name": "tcoch/netdocv0",
     "license": "MIT",
     "description": "Easy parsing of networking and infrastructure components",
+    "type": "library",
     "require": {
-        "php": "^8.3"
-    },
-    "config": {
-        "allow-plugins": {
-            "php-http/discovery": true,
-            "symfony/flex": true,
-            "symfony/runtime": true
-        },
-        "bump-after-update": true,
-        "sort-packages": true
+        "php": "^8.1"
     },
     "autoload": {
         "psr-4": {
@@ -20,7 +12,7 @@
         }
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.68",
+        "friendsofphp/php-cs-fixer": "^3",
         "phpstan/phpstan": "^2"
     }
 }

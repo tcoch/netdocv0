@@ -1,5 +1,5 @@
 {
-    "name": "tcoch/netdoc",
+    "name": "tcoch/netdocv0",
     "license": "MIT",
     "description": "Easy parsing of networking and infrastructure components",
     "require": {

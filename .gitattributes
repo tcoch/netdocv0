@@ -1,5 +1,5 @@
-/.github
-/tests
-/vendor
-/compose.yaml
-/Dockerfile
+/.github      export-ignore
+/tests        export-ignore
+/vendor       export-ignore
+/compose.yaml export-ignore
+/Dockerfile   export-ignore

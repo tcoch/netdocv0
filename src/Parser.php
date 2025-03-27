@@ -8,4 +8,9 @@ class Parser
 	{
 		echo "Parser is alive!";
 	}
+
+    public function text(): string
+    {
+        return "Text";
+    }
 }

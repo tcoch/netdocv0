@@ -1,0 +1,5 @@
+/.github
+/tests
+/vendor
+/compose.yaml
+/Dockerfile

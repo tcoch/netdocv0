@@ -25,8 +25,8 @@
 
     <coverage>
         <report>
-            <html outputDirectory="tests/coverage_html" lowUpperBound="50" highLowerBound="90"/>
-            <clover outputFile="tests/coverage_clover/clover.xml"/>
+            <html outputDirectory="tests/coverage/html" lowUpperBound="50" highLowerBound="90"/>
+            <clover outputFile="tests/coverage/clover/clover.xml"/>
         </report>
     </coverage>
 </phpunit>

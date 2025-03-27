@@ -43,6 +43,11 @@ jobs:
     - name: Run test suite
       run: vendor/bin/phpunit
 
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v5
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+
     - name: Upload coverage artifact
       uses: actions/upload-artifact@v4
       with:

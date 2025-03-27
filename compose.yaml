@@ -5,7 +5,7 @@ services:
     build:
       context: .
       target: tcoch_netdoc
-    name: tcoch_netdoc
+    container_name: tcoch_netdoc
     restart: unless-stopped
     volumes:
       - ./:/app

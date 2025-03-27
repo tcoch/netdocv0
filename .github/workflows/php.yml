@@ -63,5 +63,8 @@ jobs:
         name: php-build-${{ matrix.php-versions }}
         path: vendor
         
+    - name: Grant execute permissions for phpunit
+      run: chmod +x vendor/bin/phpunit
+        
     - name: Run test suite
       run: vendor/bin/phpunit tests/

@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -39,32 +39,6 @@ jobs:
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
-
-    - name: Save build artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: php-build-${{ matrix.php-versions }}
-        path: vendor
-
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        php-versions: ['8.1', '8.2', '8.3']
-
-    name: Run tests on PHP ${{ matrix.php-versions }}
-    steps:
-    - name: Download build artifacts
-      uses: actions/download-artifact@v4
-      with:
-        name: php-build-${{ matrix.php-versions }}
-        path: vendor
-        
-    - name: Grant execute permissions for phpunit
-      run: chmod +x vendor/bin/phpunit
         
     - name: Run test suite
       run: vendor/bin/phpunit tests/
